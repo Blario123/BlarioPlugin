@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e29140f8-ea4e-42b4-89f6-0f5adf19d400" name="Blario123.ddns" url="http://192.168.0.100">
+        <fileTransfer rootFolder="/home/bwork" accessType="SFTP" host="192.168.0.100" port="22" sshConfigId="150cd64c-90f7-4285-ab47-e9d2d70d1fae" sshConfig="bwork@192.168.0.100:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,10 @@
+name: BlarioPlugin
+version: 1.1
+author: Blario123_
+website: blario123.ddns.net
+main: Main.BlarioPlugin
+commands:
+#  bltoggle:
+#    description: Used to toggle the config options
+#    usage: /<command> <toggle option>
+#    permission: blarioplugin.toggle
