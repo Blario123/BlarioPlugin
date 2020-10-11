@@ -1,6 +1,5 @@
 package Main;
 
-import CommandEvents.BlarioToggle;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -20,7 +19,7 @@ public class BlarioPlugin extends JavaPlugin {
         getLogger().info("Starting Death Messages");
         initFiles();
         getConfig().options().copyDefaults(true);
-        if (config.getBoolean("Main")) {
+        if (config.getBoolean("DeathMessage")) {
             new DeathListener(this);
         }
         if (config.getBoolean("SleepMessage")) {
@@ -30,7 +29,6 @@ public class BlarioPlugin extends JavaPlugin {
         if (config.getBoolean("AdvancementMessage")) {
             new AdvancementListener(this);
         }
-//        this.getCommand("bltoggle").setExecutor(new BlarioToggle());
     }
     @Override
     public void onDisable() {
@@ -46,11 +44,10 @@ public class BlarioPlugin extends JavaPlugin {
             getLogger().info("Successfully created config!");
             //Ensure to set all options in the advancements array at the start of initFiles().
             config = new YamlConfiguration();
-            config.set("Main", true);
+            config.set("DeathMessage", true);
             config.set("SleepMessage", true);
-            config.set("AdvancementMessage", true);
+            config.set("AdvancementMessage", false);
             config.set("Waketime", 0);
-
             try {
                 config.save(configFile);
             } catch (IOException e) {
