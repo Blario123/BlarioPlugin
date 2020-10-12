@@ -18,6 +18,7 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run:  |
+        rm ./*.jar
         mvn -B package --file pom.xml
         zip BlarioPlugin ./target/*.jar
     - name: Release Plugin
@@ -26,8 +27,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       uses: actions/create-release@v1.1.4
       with:
-        tag_name: 'Release-v1.2'
-        release_name: 'Release v1.2'
+        tag_name: 'Release-v1.3'
+        release_name: 'Release v1.3'
         body: Release version 1.1 of BlarioPlugin
     - name: Upload Release Asset
       id: upload-release-asset
