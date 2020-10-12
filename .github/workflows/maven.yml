@@ -18,7 +18,6 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run:  |
-        rm ./target/*.jar
         mvn -B package --file pom.xml
         zip BlarioPlugin ./target/*.jar
     - name: Release Plugin
